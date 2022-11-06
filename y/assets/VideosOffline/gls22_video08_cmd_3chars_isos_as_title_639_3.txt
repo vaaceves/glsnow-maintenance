@@ -5,10 +5,11 @@ ffmpeg -hwaccel cuda -i ..\..\2022\08_Ron_Howard\gls22_video08_eng.mp4
  
 -i ..\..\2022\08_Ron_Howard\gls22_video08_subs_eng.vtt 
 -i ..\..\2022\08_Ron_Howard\gls22_video08_subs_spa.vtt 
+-i ..\..\2022\08_Ron_Howard\gls22_video08_subs_cze.vtt 
 
 -map 0 
 -map 1 -map 2 
--map 3 -map 4 
+-map 3 -map 4 -map 5
  
 -metadata:s:a:0 language=eng 
 -metadata:s:a:0 title=eng 
@@ -19,6 +20,8 @@ ffmpeg -hwaccel cuda -i ..\..\2022\08_Ron_Howard\gls22_video08_eng.mp4
 -metadata:s:s:0 title=eng 
 -metadata:s:s:1 language=spa 
 -metadata:s:s:1 title=spa 
+-metadata:s:s:2 language=ces 
+-metadata:s:s:2 title=ces
 
 -b:v 500k -vf scale=480:-2 -profile:v baseline -c:v libx264 -x264opts opencl -preset veryslow -b:a 96k -c:s mov_text 
 gls22_video08_multilang_480p.mp4 
