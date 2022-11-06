@@ -1,0 +1,24 @@
+ffmpeg -hwaccel cuda -i ..\..\2022\14_PG_Tom_De_Vries\gls22_video14_eng.mp4 
+ 
+-i ..\..\2022\14_PG_Tom_De_Vries\gls22_video14_audio_eng.aac 
+-i ..\..\2022\14_PG_Tom_De_Vries\gls22_video14_audio_spa.aac 
+ 
+-i ..\..\2022\14_PG_Tom_De_Vries\gls22_video14_subs_eng.vtt 
+-i ..\..\2022\14_PG_Tom_De_Vries\gls22_video14_subs_spa.vtt 
+
+-map 0 
+-map 1 -map 2 
+-map 3 -map 4 
+ 
+-metadata:s:a:0 language=eng 
+-metadata:s:a:0 title=eng 
+-metadata:s:a:1 language=spa 
+-metadata:s:a:1 title=spa 
+
+-metadata:s:s:0 language=eng 
+-metadata:s:s:0 title=eng 
+-metadata:s:s:1 language=spa 
+-metadata:s:s:1 title=spa 
+
+-b:v 500k -vf scale=480:-2 -profile:v baseline -c:v libx264 -x264opts opencl -preset veryslow -b:a 96k -c:s mov_text 
+gls22_video14_multilang_480p.mp4 

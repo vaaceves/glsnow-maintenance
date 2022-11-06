@@ -1,0 +1,36 @@
+ffmpeg -hwaccel cuda -i ..\..\2022\04_Johnny_C_Taylor\gls22_video04_eng.mp4 
+ 
+-i ..\..\2022\04_Johnny_C_Taylor\gls22_video04_audio_eng.aac 
+-i ..\..\2022\04_Johnny_C_Taylor\gls22_video04_audio_spa.aac 
+-i ..\..\2022\04_Johnny_C_Taylor\gls22_video04_audio_fre.aac 
+ 
+-i ..\..\2022\04_Johnny_C_Taylor\gls22_video04_subs_eng.vtt 
+-i ..\..\2022\04_Johnny_C_Taylor\gls22_video04_subs_spa.vtt 
+-i ..\..\2022\04_Johnny_C_Taylor\gls22_video04_subs_fre.vtt 
+-i ..\..\2022\04_Johnny_C_Taylor\gls22_video04_subs_ice.vtt 
+-i ..\..\2022\04_Johnny_C_Taylor\gls22_video04_subs_srp.vtt 
+
+-map 0 
+-map 1 -map 2 -map 3 
+-map 4 -map 5 -map 6 -map 7 -map 8 
+ 
+-metadata:s:a:0 language=eng 
+-metadata:s:a:0 title=eng 
+-metadata:s:a:1 language=spa 
+-metadata:s:a:1 title=spa 
+-metadata:s:a:2 language=fra 
+-metadata:s:a:2 title=fra 
+
+-metadata:s:s:0 language=eng 
+-metadata:s:s:0 title=eng 
+-metadata:s:s:1 language=spa 
+-metadata:s:s:1 title=spa 
+-metadata:s:s:2 language=fra 
+-metadata:s:s:2 title=fra 
+-metadata:s:s:3 language=isl 
+-metadata:s:s:3 title=isl 
+-metadata:s:s:4 language=srp 
+-metadata:s:s:4 title=srp 
+
+-b:v 500k -vf scale=480:-2 -profile:v baseline -c:v libx264 -x264opts opencl -preset veryslow -b:a 96k -c:s mov_text 
+gls22_video04_multilang_480p.mp4 
