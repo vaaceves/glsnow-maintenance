@@ -2,8 +2,9 @@ ffmpeg -hwaccel cuda -i ..\..\2022\01_Craig_Groeschel\gls22_video01_eng.mp4
  
 -i ..\..\2022\01_Craig_Groeschel\gls22_video01_audio_eng.aac 
 -i ..\..\2022\01_Craig_Groeschel\gls22_video01_audio_spa.aac 
--i ..\..\2022\01_Craig_Groeschel\gls22_video01_audio_fre.aac 
- 
+-i ..\..\2022\01_Craig_Groeschel\gls22_video01_audio_fre.aac
+-i ..\..\2022\01_Craig_Groeschel\gls22_video01_audio_lit.aac
+
 -i ..\..\2022\01_Craig_Groeschel\gls22_video01_subs_eng.vtt 
 -i ..\..\2022\01_Craig_Groeschel\gls22_video01_subs_spa.vtt 
 -i ..\..\2022\01_Craig_Groeschel\gls22_video01_subs_fre.vtt 
@@ -11,9 +12,15 @@ ffmpeg -hwaccel cuda -i ..\..\2022\01_Craig_Groeschel\gls22_video01_eng.mp4
 -i ..\..\2022\01_Craig_Groeschel\gls22_video01_subs_ice.vtt 
 -i ..\..\2022\01_Craig_Groeschel\gls22_video01_subs_srp.vtt 
 
+-i ..\..\2022\01_Craig_Groeschel\gls22_video01_subs_bul.vtt
+-i ..\..\2022\01_Craig_Groeschel\gls22_video01_subs_hrv.vtt
+-i ..\..\2022\01_Craig_Groeschel\gls22_video01_subs_est.vtt
+-i ..\..\2022\01_Craig_Groeschel\gls22_video01_subs_alb.vtt
+-i ..\..\2022\01_Craig_Groeschel\gls22_video01_subs_por.vtt
+
 -map 0 
--map 1 -map 2 -map 3 
--map 4 -map 5 -map 6 -map 7 -map 8 -map 9
+-map 1 -map 2 -map 3 -map 4 
+-map 5 -map 6 -map 7 -map 8 -map 9 -map 10 -map 11 -map 12 -map 13 -map 14 -map 15
  
 -metadata:s:a:0 language=eng 
 -metadata:s:a:0 title=eng 
@@ -21,6 +28,8 @@ ffmpeg -hwaccel cuda -i ..\..\2022\01_Craig_Groeschel\gls22_video01_eng.mp4
 -metadata:s:a:1 title=spa 
 -metadata:s:a:2 language=fra 
 -metadata:s:a:2 title=fra 
+-metadata:s:a:3 language=lit
+-metadata:s:a:3 title=lit 
 
 -metadata:s:s:0 language=eng 
 -metadata:s:s:0 title=eng 
