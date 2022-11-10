@@ -5,10 +5,14 @@ ffmpeg -hwaccel cuda -i ..\..\2022\12_Bob_Iger\gls22_video12_eng.mp4
  
 -i ..\..\2022\12_Bob_Iger\gls22_video12_subs_eng.vtt 
 -i ..\..\2022\12_Bob_Iger\gls22_video12_subs_spa.vtt 
+-i ..\..\2022\12_Bob_Iger\gls22_video12_subs_srp.vtt 
+-i ..\..\2022\12_Bob_Iger\gls22_video12_subs_fre.vtt 
+-i ..\..\2022\12_Bob_Iger\gls22_video12_subs_cze.vtt 
+-i ..\..\2022\12_Bob_Iger\gls22_video12_subs_ice.vtt 
 
 -map 0 
 -map 1 -map 2 
--map 3 -map 4 
+-map 3 -map 4 -map 5 -map 6 -map 7 -map 8
  
 -metadata:s:a:0 language=eng 
 -metadata:s:a:0 title=eng 
@@ -19,6 +23,14 @@ ffmpeg -hwaccel cuda -i ..\..\2022\12_Bob_Iger\gls22_video12_eng.mp4
 -metadata:s:s:0 title=eng 
 -metadata:s:s:1 language=spa 
 -metadata:s:s:1 title=spa 
+-metadata:s:s:2 language=srp 
+-metadata:s:s:2 title=srp 
+-metadata:s:s:3 language=fra 
+-metadata:s:s:3 title=fra 
+-metadata:s:s:4 language=ces 
+-metadata:s:s:4 title=ces 
+-metadata:s:s:5 language=isl 
+-metadata:s:s:5 title=isl 
 
 -b:v 500k -vf scale=480:-2 -profile:v baseline -c:v libx264 -x264opts opencl -preset veryslow -b:a 96k -c:s mov_text 
 gls22_video12_multilang_480p.mp4 
