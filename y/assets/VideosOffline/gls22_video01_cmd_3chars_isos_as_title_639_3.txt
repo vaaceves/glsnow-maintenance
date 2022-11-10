@@ -43,6 +43,17 @@ ffmpeg -hwaccel cuda -i ..\..\2022\01_Craig_Groeschel\gls22_video01_eng.mp4
 -metadata:s:s:4 title=isl 
 -metadata:s:s:5 language=srp 
 -metadata:s:s:5 title=srp 
+-metadata:s:s:6 language=bul
+-metadata:s:s:6 title=bul
+-metadata:s:s:7 language=hrv 
+-metadata:s:s:7 title=hrv
+-metadata:s:s:8 language=est 
+-metadata:s:s:8 title=est
+-metadata:s:s:9 language=sqi
+-metadata:s:s:9 title=sqi
+-metadata:s:s:10 language=por 
+-metadata:s:s:10 title=por
+
 
 -b:v 500k -vf scale=480:-2 -profile:v baseline -c:v libx264 -x264opts opencl -preset veryslow -b:a 96k -c:s mov_text 
 gls22_video01_multilang_480p.mp4 
