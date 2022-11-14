@@ -5,10 +5,13 @@ ffmpeg -hwaccel cuda -i ..\..\2022\06_Judah_Smith\gls22_video06_eng.mp4
  
 -i ..\..\2022\06_Judah_Smith\gls22_video06_subs_eng.vtt 
 -i ..\..\2022\06_Judah_Smith\gls22_video06_subs_spa.vtt 
+-i ..\..\2022\06_Judah_Smith\gls22_video06_subs_est.vtt 
+-i ..\..\2022\06_Judah_Smith\gls22_video06_subs_alb.vtt 
+-i ..\..\2022\06_Judah_Smith\gls22_video06_subs_swa.vtt  
 
 -map 0 
 -map 1 -map 2 
--map 3 -map 4 
+-map 3 -map 4 -map 5 -map 6 -map 7
  
 -metadata:s:a:0 language=eng 
 -metadata:s:a:0 title=eng 
@@ -19,6 +22,12 @@ ffmpeg -hwaccel cuda -i ..\..\2022\06_Judah_Smith\gls22_video06_eng.mp4
 -metadata:s:s:0 title=eng 
 -metadata:s:s:1 language=spa 
 -metadata:s:s:1 title=spa 
+-metadata:s:s:2 language=est 
+-metadata:s:s:2 title=est 
+-metadata:s:s:3 language=sqi 
+-metadata:s:s:3 title=sqi 
+-metadata:s:s:4 language=swa 
+-metadata:s:s:4 title=swa 
 
 -b:v 500k -vf scale=480:-2 -profile:v baseline -c:v libx264 -x264opts opencl -preset veryslow -b:a 96k -c:s mov_text 
 gls22_video06_multilang_480p.mp4 

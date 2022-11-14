@@ -16,6 +16,7 @@ gls22_video05_eng_video_144p.m3u8
 #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="program_audio",LANGUAGE="eng",NAME="English",AUTOSELECT=YES,DEFAULT=YES,URI="gls22_video05_eng_audio_eng.m3u8"
 #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="program_audio",LANGUAGE="spa",NAME="Spanish",AUTOSELECT=YES,DEFAULT=NO,URI="gls22_video05_spa_audio_spa.m3u8"
 #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="program_audio",LANGUAGE="fra",NAME="French",AUTOSELECT=YES,DEFAULT=NO,URI="gls22_video05_eng_audio_fra.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="program_audio",LANGUAGE="cat",NAME="Catalan",AUTOSELECT=YES,DEFAULT=NO,URI="gls22_video05_spa_audio_spa.m3u8"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="eng",URI="gls22_video05_eng_subs_eng.m3u8"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="spa",URI="gls22_video05_spa_subs_spa.m3u8"
 #EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="French",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="fra",URI="subs/fra/playlist.m3u8"

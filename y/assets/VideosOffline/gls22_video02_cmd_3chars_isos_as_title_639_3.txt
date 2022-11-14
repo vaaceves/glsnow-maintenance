@@ -3,6 +3,8 @@ ffmpeg -hwaccel cuda -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_eng.mp4
 -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_audio_eng.aac 
 -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_audio_spa.aac 
 -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_audio_fre.aac 
+-i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_audio_lit.aac 
+-i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_audio_pol.aac 
  
 -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_subs_eng.vtt 
 -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_subs_spa.vtt 
@@ -10,10 +12,15 @@ ffmpeg -hwaccel cuda -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_eng.mp4
 -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_subs_cze.vtt 
 -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_subs_ice.vtt 
 -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_subs_srp.vtt 
-
+-i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_subs_bul.vtt 
+-i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_subs_hrv.vtt 
+-i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_subs_est.vtt 
+-i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_subs_alb.vtt 
+-i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_subs_por.vtt 
+-i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_subs_swa.vtt 
 -map 0 
--map 1 -map 2 -map 3 
--map 4 -map 5 -map 6 -map 7 -map 8 -map 9
+-map 1 -map 2 -map 3 -map 4 -map 5 
+-map 6 -map 7 -map 8 -map 9 -map 10 -map 11 -map 12 -map 13 -map 14 -map 15 -map 16 -map 17
  
 -metadata:s:a:0 language=eng 
 -metadata:s:a:0 title=eng 
@@ -21,6 +28,10 @@ ffmpeg -hwaccel cuda -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_eng.mp4
 -metadata:s:a:1 title=spa 
 -metadata:s:a:2 language=fra 
 -metadata:s:a:2 title=fra 
+-metadata:s:a:3 language=lit 
+-metadata:s:a:3 title=lit 
+-metadata:s:a:4 language=pol 
+-metadata:s:a:4 title=pol 
 
 -metadata:s:s:0 language=eng 
 -metadata:s:s:0 title=eng 
@@ -34,6 +45,18 @@ ffmpeg -hwaccel cuda -i ..\..\2022\02_Vanessa_Van_Edwards\gls22_video02_eng.mp4
 -metadata:s:s:4 title=isl 
 -metadata:s:s:5 language=srp 
 -metadata:s:s:5 title=srp 
+-metadata:s:s:6 language=bul 
+-metadata:s:s:6 title=bul 
+-metadata:s:s:7 language=hrv 
+-metadata:s:s:7 title=hrv 
+-metadata:s:s:8 language=est 
+-metadata:s:s:8 title=est 
+-metadata:s:s:9 language=sqi 
+-metadata:s:s:9 title=sqi 
+-metadata:s:s:10 language=por 
+-metadata:s:s:10 title=por 
+-metadata:s:s:11 language=swa 
+-metadata:s:s:11 title=swa 
 
 -b:v 500k -vf scale=480:-2 -profile:v baseline -c:v libx264 -x264opts opencl -preset veryslow -b:a 96k -c:s mov_text 
 gls22_video02_multilang_480p.mp4 
